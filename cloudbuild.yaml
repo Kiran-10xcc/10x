@@ -1,6 +1,6 @@
 steps:
 - name: python:3.7
-  args: ["python","-m","unittest","discover","--verbose","-s","./package_name/test/","-p","*_test.py"]
+  args: ["python","-m","unittest","discover","--verbose","-s","./test/","-p","*_test.py"]
   id: Unittest
 - name: "gcr.io/cloud-builders/gcloud"
   id: Deploy
