@@ -6,7 +6,7 @@ steps:
     - '-c'
     - |
       pip install pytest, flask
-      pytest
+      python -m pytest
   id: Unittest
 - name: "gcr.io/cloud-builders/gcloud"
   id: Deploy
