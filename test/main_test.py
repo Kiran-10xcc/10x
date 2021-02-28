@@ -21,7 +21,7 @@ def test_1():
 
     r = client.get('/')
     assert r.status_code == 200
-    assert 'AAA10xCC' in r.data.decode('utf-8')
+    assert '10xCC' in r.data.decode('utf-8')
 
 def test_2():
     main.app.testing = True
