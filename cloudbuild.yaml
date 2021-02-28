@@ -5,6 +5,8 @@ steps:
   entrypoint: /bin/sh
   args:
   - -c
+  - 'pip install pytest'
+  - 'pip list'
   - 'pip install -t /workspace/lib -r requirements.txt && pytest functions/*_test.py'
 - name: "gcr.io/cloud-builders/gcloud"
   id: Deploy
