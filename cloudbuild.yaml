@@ -1,5 +1,5 @@
 steps:
-- name: "gcr.io/cloud-builders/gcloud"
+- name: "gcr.io/cloud-builders/docker"
   args: ["python","-m","unittest","discover","--verbose","-s",".","-p","*_test.py"]
   id: Unittest
 - name: "gcr.io/cloud-builders/gcloud"
