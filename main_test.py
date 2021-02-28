@@ -15,10 +15,42 @@
 import main
 
 
-def test_index():
+def test_1():
     main.app.testing = True
     client = main.app.test_client()
 
     r = client.get('/')
     assert r.status_code == 200
-    assert 'Hello Kiran' in r.data.decode('utf-8')
+    assert '10xCC' in r.data.decode('utf-8')
+
+def test_2():
+    main.app.testing = True
+    client = main.app.test_client()
+
+    r = client.get('/about')
+    assert r.status_code == 200
+    assert 'This page is work in progress' in r.data.decode('utf-8')
+
+def test_3():
+    main.app.testing = True
+    client = main.app.test_client()
+
+    r = client.get('/careers')
+    assert r.status_code == 200
+    assert 'This page is work in progress' in r.data.decode('utf-8')
+
+def test_4():
+    main.app.testing = True
+    client = main.app.test_client()
+
+    r = client.get('/contact')
+    assert r.status_code == 200
+    assert 'This page is work in progress' in r.data.decode('utf-8')
+
+def test_5():
+    main.app.testing = True
+    client = main.app.test_client()
+
+    r = client.get('/#services')
+    assert r.status_code == 200
+    assert 'Consulting Services' in r.data.decode('utf-8')
