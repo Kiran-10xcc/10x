@@ -14,7 +14,6 @@
 
 import main
 
-
 def test_1():
     main.app.testing = True
     client = main.app.test_client()
