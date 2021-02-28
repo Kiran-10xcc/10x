@@ -1,5 +1,6 @@
 steps:
 - name: python:3.7
+  'pip install pytest-flask'
   args: ["python","-m","unittest","discover","--verbose","-s","./test/","-p","*_test.py"]
   id: Unittest
 - name: "gcr.io/cloud-builders/gcloud"
