@@ -1,7 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ["run","gcr.io/google-appengine/python","pip","install","pytest","pip","install","flask","pytest","main_test.py"]
-  id: unittest
 - name: "gcr.io/cloud-builders/gcloud"
   id: Deploy
   args: ["app", "deploy"]
